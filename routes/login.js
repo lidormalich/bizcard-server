@@ -33,20 +33,7 @@ router.post("/", async (req, res) => {
     } catch (error) {
         res.status(400).send(error);
     }
-
-
 })
-// router.get("/userinfo", auth, async (req, res) => {
-//     try {
-//         // let user = await User.findOne({ email: req.payload.email });
-//         let user = await User.findById(req.payload._id);
-//         if (!user) return res.status(400).send("No such User");
-//         res.status(200).send(_.pick(user, ["_id", "email", "name", "isAdmin"]));
-//     } catch (error) {
-//         res.status(400).send(error);
-//     }
-// })
-
 
 
 module.exports = router;

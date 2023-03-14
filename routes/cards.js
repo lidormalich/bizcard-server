@@ -62,7 +62,6 @@ router.put("/:id", auth, async (req, res) => {
 });
 router.post("/", auth, async (req, res) => {
     try {
-        // check if user is admin -- with payload
         if (!req.payload.isBusiness)
             return res.status(400).send("Access denied. No Business permission");
         // joi validate
