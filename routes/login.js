@@ -16,6 +16,7 @@ const loginSchema = joi.object({
 })
 
 router.post("/", async (req, res) => {
+    console.log(req.body)
     try {
         // joi validation
         const { error } = loginSchema.validate(req.body);
