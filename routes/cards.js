@@ -72,7 +72,7 @@ router.post("/", auth, async (req, res) => {
         console.log(error);
         if (error) return res.status(400).send("Data Problem");
         // add card to db
-        let card = new Card({ ...req.body, userId: req.payload._id });
+        let card = new Card({ ...req.body, userId: req.payload._id, lodash_id: _.random(1, 10000) });
         await card.save();
         res.status(201).send(card);
     } catch (error) {

@@ -33,6 +33,9 @@ const cardsSchema = new mongoose.Schema({
     }, userId: {
         type: String,
         required: true,
+    }, lodash_id: {
+        type: Number,
+        required: true,
     },
 });
 
